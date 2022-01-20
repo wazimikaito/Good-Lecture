@@ -12,7 +12,7 @@
     <div class="content">
         <p class="attension">レビュー内容を入力してください</p>
         <p>お名前</p>
-        <input class="small-text-box">
+        <input class="small-text-box" type="text" id="user_name" value="">
         <p>レビュー</p>
         
         
@@ -26,8 +26,16 @@
             </span>
           </div>
         <p>コメント</p>
-        <input type="text" class="large-text-box">
-        <button type="submit">投稿する</button>
+        <input  class="large-text-box" type="text" id="user_comment">
+        <input class="btn" type="submit" id="push_btn" onclick="buttonClick()">
     </div>
+    <script>
+        function buttonClick(){
+            let confirm_user_name = document.getElementById('user_name');
+            let confirm_user_comment = document.getElementById('user_comment');
+            console.log(confirm_user_name.value);
+            console.log(confirm_user_comment.value);
+        }
+    </script>
 </body>
 </html>
