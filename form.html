@@ -9,13 +9,14 @@
     <header>
         <h1 id="blank">Good-Lecture</h1>
     </header>
+    <!-- <div id="mask" class="hidden"></div>
+    <div id="modal" class="hidden">投稿しますか？</div> -->
     <div class="content">
         <p class="attension">レビュー内容を入力してください</p>
         <p>お名前</p>
-        <input class="small-text-box" type="text" id="user_name" value="">
+        <input class="small-text-box" type="text" maxlength="20" id="user_name" value="">
         <p>レビュー</p>
-        
-        
+        <div></div>
         <div class="stars">
             <span>
               <input id="review01" type="radio" name="review"><label for="review01">★</label>
@@ -26,16 +27,17 @@
             </span>
           </div>
         <p>コメント</p>
-        <input  class="large-text-box" type="text" id="user_comment">
-        <input class="btn" type="submit" id="push_btn" onclick="buttonClick()">
+        <input class="large-text-box" type="textarea" id="user_comment">
+        <button id="open">投稿する</button>
     </div>
-    <script>
-        function buttonClick(){
-            let confirm_user_name = document.getElementById('user_name');
-            let confirm_user_comment = document.getElementById('user_comment');
-            console.log(confirm_user_name.value);
-            console.log(confirm_user_comment.value);
-        }
+    <div id="mask" class="hidden"></div>
+    <div id="modal" class="hidden">
+        <p>投稿しますか？</p>
+        <ul></ul>
+        <button id="close">戻る</button>
+        <button id="upload">投稿</button>
+    </div>
+    <script src="js/form.js">
     </script>
 </body>
 </html>
